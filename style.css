@@ -8,8 +8,10 @@
 header {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: 60px;
+    position: fixed;
+    z-index: 100;
 }
 
 nav {
@@ -25,13 +27,90 @@ nav ul {
 
 nav ul li {
     display: inline-flex;
+    color: rgb(115, 210, 20);
+    font-size: 20px;
 }
 
 nav ul li:hover {
     cursor: pointer;
-    box-shadow: 5px 5px 20px rgb(60, 160, 170);
+    box-shadow: 5px 5px 20px rgb(64, 64, 65);
     background: transparent;
-    font-size: 20px;
+    font-size: 25px;
     transition: 0.4s ease;
 }
 
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.about {
+    display: inline-flex;
+    align-items: center;
+    background: url(Assets/dark-black-background-design.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+.about img {
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.holder {
+    display: inline-flex;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+img, .my-info {
+    display: inline;
+}
+
+span {
+    color: rgb(80, 170, 10);
+    font-size: 2rem;
+}
+
+h3 {
+    color: white;
+}
+
+.skills {
+    background: url(Assets/dark-concrete-background.avif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+.projects {
+    background: url(Assets/dark-black-background-link-design.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+.contact-me {
+    background: url(Assets/dark-black-background-blue-paint-design.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    background-color: black;
+    color: white;
+}
