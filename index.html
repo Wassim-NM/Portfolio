@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>About Me</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact Me</li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="about">
-            <div class="holder">
-                <img src="Assets/logo.png" alt="my photo">
-                <div class="my-info">
-                    <h3><span>Web Developer</span> & <span>Software Engineering</span></h3>
 
-                    <p></p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>About Me</li>
+                    <li>Skills</li>
+                    <li>Projects</li>
+                    <li>Contact Me</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="about">
+                <div class="holder">
+                    <div class="my-info">
+                        <h3><span>Web Developer</span> & <span>Software Engineering</span></h3>
+                        <p> Wassim Mahmoud, </p>
+                        <p> 
+                            A dedicated Computer Manager with expertise in web development. Successfully enhanced a
+                            university website, improving usability and accessibility for a diverse audience. Passionate
+                            about helping businesses thrive through innovative and creative design solutions.
+                        </p>
+                    </div>
+                    <img src="Assets/logo.png" alt="my photo">
                 </div>
-            </div>
-        </section>
-        <section class="skills">
-            <div></div>
-        </section>
-        <section class="projects">
-            <div></div>
-        </section>
-        <section class="contact-me">
-            <div></div>
-        </section>
-    </main>
-    <footer>
-        <dir>&copy;Wassim N.Mahmoud</dir> <dir>@2024-2025</dir>
-    </footer>
-    <script src="index.js"></script>
-</body>
+            </section>
+            <section class="skills">
+            </section>
+            <section class="projects">
+                <div class="project-holder">
+                    <div class="container">
+                        <div class="project-cell">
+                            <img src="Assets/G.T.M.C-logo.png" alt="Lebanon">
+                            <p>
+                                Presenting my country "Lebanon" in the Guide To My Country 2024 with new type of styling.
+                                <a href="Guide to my country/index.html">Explore <i class='bx bx-link-external'></i></a>
+                                <!-- I have been certified using the OMT system since 2023 and have won the Golden User Award
+                                three times and the Bronze Award twice. -->
+                            </p>
+                        </div>
+                        <div class="project-cell">
+                            <img src="Assets/stop-watch.png" alt="Stop Watch">
+                            <p>
+                                Combo of styling prsentation and javascript functions to create a utility stop watch.
+                                <!-- I have been working as a web developer since 2023 and have developed more than 50
+                                websites for different companies. -->
+                                 <a href="Stop Watch/index.html">Explore <i class='bx bx-link-external'></i></a>
+                            </p>
+                        </div>
+                        <div class="project-cell">
+                            <img src="Assets/Calculator.png" alt="Hardweare Repairing">
+                            <p> 
+                                A simple calculator with basic functions. 
+                                <!-- I have been repairing hardware since 2020 and have repaired more than 1000 devices.  -->
+                                <a href="Calculator/index.html">Explore <i class='bx bx-link-external'></i></a>
+                            </p>
+                        </div>
+                        <div class="project-cell">
+                            <img src="Assets/Art.png" alt="busines management">
+                            <p> 
+                                I have been managing busines since 2022 & my own busines since 2024. 
+                                <a href="https://trinket.io/python/c00cbff14c">Explore <i class='bx bx-link-external'></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-me">
+                <div class="form-holder">
+                    <form id="contact-form" action="submit_form.php" method="post">
+                        <h2>Contact Me</h2>
+                        <label for="name">Name</label>
+                        <input type="text" id="user_name" name="name" placeholder="Your Name" required>
+                
+                        <label for="email">Email</label>
+                        <input type="email" id="user_email" name="email" placeholder="Your Email" required>
+                
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <dir>&copy;Wassim N.Mahmoud</dir>
+            <dir>@2024-2025</dir>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+
 </html>
