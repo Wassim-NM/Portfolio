@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,34 +23,45 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
-    align-items: right;
+    align-items: center;
     gap: 30px;
     padding: 10px;
 }
 
 nav ul li {
-    display: inline-flex;
-    color: #0047AB;
+    list-style: none;
     font-size: 20px;
+    width: 111px;
+    text-align: center;
 }
 
 nav ul li:hover {
     cursor: pointer;
-    box-shadow: 5px 5px 20px rgb(64, 64, 65);
-    background: transparent;
-    font-size: 25px;
+    background: none;
+    font-size: 22px;
     transition: 0.4s ease;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
 section {
+    background: url(Assets/dark-black-background-design.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .about {
     display: inline-flex;
     align-items: center;
-    background: url(Assets/dark-black-background-design.avif);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: black;
@@ -72,7 +85,7 @@ section {
     width: 30%;
 }
 span {
-    color: #0047AB;
+    color: #007BFF;
     font-size: 2rem;
 }
 
@@ -88,18 +101,168 @@ h3 {
     word-spacing: 8px;
 }
 
-.skills {
-    background: url(Assets/dark-concrete-background.avif);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: black;
+/* Section Styling */
+#experience {
+    text-align: center;
 }
 
+/* Experience Container */
+.experience {
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+/* Individual Experience Item */
+.experience-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    height: 70%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+}
+
+/* Title and Date */
+.experience-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #0073e6;
+}
+
+.experience-item p {
+    font-size: 1em;
+    color: #555;
+    margin: 0;
+}
+
+
+.hold {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 20px;
+    align-items: start;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.codeHolder, .softHolder {
+    display: grid;
+    gap: 30px;
+    grid-template-rows: auto 1fr; /* Title at the top */
+    width: 100%;
+    max-width: 1200px;
+    align-items: start;
+    justify-items: center;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    color: #007BFF;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Optional for visual emphasis */
+    padding: 10px 0;
+    margin: 0; /* Remove default margins */
+}
+
+.skills-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+}
+
+.parent-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    background: conic-gradient(#007BFF 10% 0%, #212428 0% 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.progress {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: linear-gradient(280deg, #1e2024, #23272b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-number {
+    font-family: 'Poppins', sans-serif;
+    color: #007BFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    color: #007BFF;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .skill {
+        width: 100px;
+        height: 100px;
+    }
+
+    .progress-number {
+        font-size: 1.2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+}
+
+
 .projects {
-    background: url(Assets/dark-black-background-link-design.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
 }
 
 .project-holder {
@@ -148,15 +311,15 @@ h3 {
 }
 
 .project-cell p a {
-    color: #0047AB;
+    color: #007BFF;
     text-decoration: none;
 }
 
 .contact-me {
-    background: url(Assets/dark-black-background-blue-paint-design.webp);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: black;
+    height: 90vh;
 }
 
 .form-holder {
@@ -211,8 +374,9 @@ h3 {
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
+    justify-content: center;
+    gap: 20px;
+    height: 10vh;
     width: 100%;
     padding: 10px;
     position: absolute;

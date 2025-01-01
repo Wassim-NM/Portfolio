@@ -28,6 +28,7 @@ contactForm.addEventListener('submit', (e) => {
         .then((response) => {
             // Change button text
             submitBtn.innerHTML = 'Sent';
+            submitBtn.disabled = true;
             // Reset form
             contactForm.reset();
             // Show success message
@@ -39,3 +40,39 @@ contactForm.addEventListener('submit', (e) => {
             alert('Failed to send message. Please try again');
         });
 });
+
+'use strict';
+
+function progressBarAndCountNumber() {
+    const progressElements = document.querySelectorAll('.progress');
+    let count = 0;
+
+    // Define the maximum percentage value for progress
+    const MAX_PROGRESS = 100;
+
+    // Use setInterval to increment and update progress
+    const interval = setInterval(() => {
+        count++;
+
+        progressElements.forEach(element => {
+            const targetProgress = parseInt(element.dataset.progress, 100); // Convert data-progress to an integer
+
+            // Update the progress only if it's within the target range
+            if (count <= targetProgress) {
+                element.parentElement.style.background = `conic-gradient(#f9004d ${count}%, #212428 ${count}%)`;
+                element.querySelector('.progress-number').textContent = `${count}%`;
+            }
+        });
+
+        // Stop the interval once the maximum value is reached
+        if (count === MAX_PROGRESS) {
+            clearInterval(interval);
+        }
+    }, 20); // Delay in milliseconds
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    progressBarAndCountNumber();
+});
+
