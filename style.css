@@ -147,6 +147,22 @@ h3 {
     margin: 0;
 }
 
+/* Image Styling */
+.experience-img {
+    width: 100px; /* Set image width */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjusting the layout if image is too large */
+.experience-item .experience-img {
+    height: 150px; /* You can adjust this height according to your design */
+    object-fit: contain; /* Ensures images don't stretch but fit inside the container */
+}
 
 .hold {
     display: grid;
