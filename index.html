@@ -11,22 +11,24 @@
 
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact-me">Contact Me</a></li>
-                </ul>
-            </nav>
+            <div class="navContainer">
+                <nav>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact-me">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main>
             <section id="about" class="about">
                 <div class="holder">
                     <div class="my-info">
                         <h3><span>Web Developer</span> & <span>Software Engineering</span></h3>
-                        <p> Wassim Mahmoud, </p>
+                        <!-- <p> Wassim Mahmoud,</p> -->
                         <p> A dedicated Computer Manager with expertise in web development. Successfully enhanced a
                             university website, improving usability and accessibility for a diverse audience. Passionate
                             about helping businesses thrive through innovative and creative design solutions. </p>
@@ -39,28 +41,49 @@
                     <h3 class="titles">Experiance</h3>
                     <div class="experience">
                         <div class="experience-item">
-                            <h2>OMT</h2>
-                            <h3>2022-2025</h3>
-                            <p>Handled money transfer services, bill payments, and financial transactions efficiently
-                                while ensuring excellent customer service.</p>
-                            <!-- I have been certified using the OMT system since 2023 and have won the Golden User Award
-                                three times and the Bronze Award twice. -->
-                            <img src="Assets/omt-logo.png" alt="OMT Logo" class="experience-img">
+                            <div class="exp-title">
+                                <h2>OMT</h2>
+                            </div>
+                            <div class="exp-duration">
+                                <h3>2022-2025</h3>
+                            </div>
+                            <div class="exp-description">
+                                <p>Handled money transfer services, bill payments, and financial transactions
+                                    efficiently while ensuring excellent customer service.</p>
+                            </div>
+                            <div class="exp-image">
+                                <img src="Assets/omt-logo.png" alt="OMT Logo">
+                            </div>
                         </div>
                         <div class="experience-item">
-                            <h2>Hardware Repair</h2>
-                            <h3>2023-2025</h3>
-                            <p>Diagnosed and repaired a variety of hardware issues, including desktops, laptops, and
-                                peripherals, ensuring optimal system performance.</p>
-                            <img src="Assets/hardware-repair-logo.png" alt="Hardware Repair Logo"
-                                class="experience-img">
+                            <div class="exp-title">
+                                <h2>Hardware Repair</h2>
+                            </div>
+                            <div class="exp-duration">
+                                <h3>2023-2025</h3>
+                            </div>
+                            <div class="exp-description">
+                                <p>Diagnosed and repaired a variety of hardware issues, including desktops, laptops, and
+                                    peripherals, ensuring optimal system performance.</p>
+                            </div>
+                            <div class="exp-image">
+                                <img src="Assets/hardware-repair-logo.png" alt="Hardware Repair Logo">
+                            </div>
                         </div>
                         <div class="experience-item">
-                            <h2>Business Managing</h2>
-                            <h3>2024-2025</h3>
-                            <p>Oversaw daily operations, managed a team, and implemented strategies to improve
-                                productivity and profitability in a dynamic business environment.</p>
-                            <img src="Assets/buisness-logo.jpg" alt="Business Managing Logo" class="experience-img">
+                            <div class="exp-title">
+                                <h2>Business Managing</h2>
+                            </div>
+                            <div class="exp-duration">
+                                <h3>2024-2025</h3>
+                            </div>
+                            <div class="exp-description">
+                                <p>Oversaw daily operations, managed a team, and implemented strategies to improve
+                                    productivity and profitability in a dynamic business environment.</p>
+                            </div>
+                            <div class="exp-image">
+                                <img src="Assets/buisness-logo.jpg" alt="Business Managing Logo">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,35 +177,55 @@
             <section id="projects">
                 <div class="projects">
                     <h3 class="titles">Projects</h3>
-                    <div class="container">
-                        <div class="project-cell">
-                            <img src="Assets/G.T.M.C-logo.png" alt="Lebanon">
-                            <p> Presenting my country "Lebanon" in the Guide To My Country 2024 with new type of
-                                styling. <a href="Guide to my country/index.html">Explore <i
-                                        class='bx bx-link-external'></i></a>
-                            </p>
+                    <h1>Drag the cards to move them</h1>
+                    <div class="card-container">
+                        <div class="card-carousel">
+                            <div class="card" id="1">
+                                <div class="image-container">
+                                    <img src="Assets/G.T.M.C-logo.png" alt="Guide to my country project">
+                                </div>
+                                <p> Presenting my country "Lebanon" in the Guide To My Country 2024 with new type of
+                                    styling. <a href="https://guidetomycountry.netlify.app/" target="_blank">Explore <i
+                                            class='bx bx-link-external'></i></a>
+                                </p>
+                            </div>
+                            <div class="card" id="2">
+                                <div class="image-container">
+                                    <img src="Assets/Calculator.png" alt="Calculator project">
+                                </div>
+                                <p> A simple calculator with basic functions. <a
+                                        href="https://stopwatch-25.netlify.app/" target="_blank">Explore <i
+                                            class='bx bx-link-external'></i></a>
+                                </p>
+                            </div>
+                            <div class="card" id="3">
+                                <div class="image-container">
+                                    <img src="Assets/stop-watch.png" alt="Stop Watch project">
+                                </div>
+                                <p> Combo of styling prsentation and javascript functions to create a utility stop
+                                    watch. <a href="">Explore <i class='bx bx-link-external'></i></a>
+                                </p>
+                            </div>
+                            <div class="card" id="4">
+                                <div class="image-container">
+                                    <img src="Assets/To Do.png" alt="To Do List project">
+                                </div>
+                                <p> A simple to do list to help you manage your tasks and keep track of your progress.
+                                    <a href="https://to-do-list-25.netlify.app/" target="_blank">Explore <i
+                                            class='bx bx-link-external'></i></a>
+                                </p>
+                            </div>
+                            <div class="card" id="5">
+                                <div class="image-container">
+                                    <img src="Assets/weather app.png" alt="Weather App project">
+                                </div>
+                                <p> Simple weather app that uses API to get the data and display it in a simple way. <a
+                                        href="https://weather-app-25.netlify.app/" target="_blank">Explore <i
+                                            class='bx bx-link-external'></i></a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="project-cell">
-                            <img src="Assets/stop-watch.png" alt="Stop Watch">
-                            <p> Combo of styling prsentation and javascript functions to create a utility stop watch. <!-- I have been working as a web developer since 2023 and have developed more than 50
-                                websites for different companies. -->
-                                <a href="Stop Watch/index.html">Explore <i class='bx bx-link-external'></i></a>
-                            </p>
-                        </div>
-                        <div class="project-cell">
-                            <img src="Assets/Calculator.png" alt="Hardweare Repairing">
-                            <p> A simple calculator with basic functions.
-                                <!-- I have been repairing hardware since 2020 and have repaired more than 1000 devices.  -->
-                                <a href="Calculator/index.html">Explore <i class='bx bx-link-external'></i></a>
-                            </p>
-                        </div>
-                        <div class="project-cell">
-                            <img src="Assets/Art.png" alt="busines management">
-                            <p> I have been managing busines since 2022 & my own busines since 2024. <a
-                                    href="https://trinket.io/python/c00cbff14c">Explore <i
-                                        class='bx bx-link-external'></i></a>
-                            </p>
-                        </div>
+                        <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
                     </div>
                 </div>
             </section>
