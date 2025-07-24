@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+    --main-color: #000000;
+    --primary-color: #007BFF;
+    --secondary-color: #212428;
+    --text-color: #ffffff;
+    --bg-color: #1c1e22;
+    --hover-color: #0056b3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,51 +16,111 @@
     box-sizing: border-box;
 }
 
+.mobile {
+    display: none;
+}
+
+.normal {
+    display: block;
+}
+
 /* Header */
 
 .navContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    gap: 18vw;
     width: 100%;
-    height: 60px;
-    background-color: black;
+    height: 4vw;
+    background-color: var(--secondary-color);
     position: fixed;
     top: 0;
     z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 20%;
+    box-shadow: var(--hover-color) 0.3vw -0.05vw 1.5vw;
+}
+
+.logo img {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 20%;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    height: 3vw;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    padding: 0.4vw;
+    gap: 2vw;
+    height: 100%;
+    background-image: linear-gradient(
+        200deg,
+        var(--main-color) 20%,
+        var(--primary-color) 100%
+    );
+    border-radius: 15px;
 }
 
 nav ul li {
     list-style: none;
-    font-size: 20px;
-    width: 111px;
+    font-size: 1.5vw;
+    width: 8vw;
     text-align: center;
 }
 
-nav ul li:hover {
+nav ul li:hover, .contact:hover {
     cursor: pointer;
-    background: none;
-    font-size: 22px;
+    scale: 1.1;
     transition: 0.4s ease;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: var(--text-color);
+}
+
+nav ul li a:hover{
+    color: var(--hover-color);
+    transition: 0.4s ease-in;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    width: 10vw;
+    border-radius: 15px;
+    background-image: linear-gradient(
+        110deg,
+        var(--main-color) 20%,
+        var(--primary-color) 100%
+    );
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2vw;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 section {
@@ -69,16 +138,16 @@ section {
     align-items: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-color: black;
+    background-color: var(--main-color);
 }
 
 .about img {
-    height: 60%;
+    height: 20vw;
     border-radius: 50%;
 }
 
 .holder {
-    padding: 10px;
+    padding: 1.5vw;
     display: inline-flex;
     gap: 200px;
     align-items: center;
@@ -88,21 +157,39 @@ section {
 }
 
 .my-info {
-    width: 30%;
+    width: 40%;
+}
+
+.typingHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 span {
-    color: #007BFF;
-    font-size: 2rem;
+    color: var(--primary-color);
+    font-size: 2vw;
 }
 
-h3 {
-    color: white;
+.my-info h3 {
+    width: 100%;
+    font-size: 1.5vw;
+    color: var(--text-color);
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(36) infinite alternate-reverse;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
 }
 
 .my-info p {
-    color: white;
-    font-size: 18px;
+    color: var(--text-color);
+    font-size: 1.2vw;
     margin-top: 10px;
     letter-spacing: 1.25px;
     word-spacing: 8px;
@@ -167,6 +254,7 @@ h3 {
     height: 100%;
     display: flex;
     align-items: center;
+    border-radius: 8px 8px 0 0;
 }
 
 .exp-title h2 {
@@ -203,9 +291,9 @@ h3 {
 }
 
 .exp-image img {
-    width: 70%;
+    width: 95%;
     height: 100%;
-    border-radius: 8px; 
+    border-radius: 0 0 8px 8px; 
     object-fit: cover;
     /* Ensures images don't stretch but fit inside the container */
 }
@@ -254,7 +342,7 @@ h3 {
 
 .skills-container {
     display: grid;
-    gap: 30px;
+    gap: 25px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     width: 100%;
 }
@@ -267,8 +355,8 @@ h3 {
 }
 
 .skill {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
     background: conic-gradient(#007BFF 10% 0%, #212428 0% 0%);
@@ -569,60 +657,108 @@ footer {
     }
 }
 
+@media screen and (max-width: 770px) {
+    .mobile {
+        display: block;
+    }
+    .normal {
+        display: none;
+    }
+    
+}
+
 /* Responsive Header */
 
 /* Normal phone size */
 
 @media screen and (max-width: 430px) {
+    .logo {
+        width: 6vw;
+        height: 5vw;
+    }
+
+    .logo img {
+        width: 6vw;
+        height: 5vw;
+        border-radius: 2px
+    }
+
     .navContainer {
-        height: 40px;
-        justify-content: left;
+        height: 7vw;
+        justify-content: space-sevenly;
+        gap: 5vw;
     }
     nav ul {
         width: 100%;
-        gap: 5px;
+        gap: 2vw;
     }
  
     nav ul li {
-        font-size: 12px;
-        width: 85px;
+        font-size: 2vw;
+        width: 14vw;
+    }
+    .contact {
+        width: 6vw;
+        height: 5vw;
+        border-radius: 2px;
+        
+    }
+    .contact-btn {
+        font-size: 3vw;
     }
 }
 
-/* Large phne size */
+/* Large phone size */
 
 @media screen and (min-width: 430px) and (max-width: 530px) {
     .navContainer {
-        height: 45px;
-        justify-content: left;
+        height: 9vw;
+        justify-content: space-sevenly;
+        gap: 5vw;
     }
     nav ul {
         width: 100%;
-        gap: 10px;
+        gap: 3vw;
     }
  
     nav ul li {
-        font-size: 12px;
-        width: 85px;
+        font-size: 2.1vw;
+        width: 15vw;
+    }
+    .contact {
+        width: 15vw;
+        height: 6vw;
+    }
+    .contact-btn {
+        font-size: 3vw;
+        padding: 8px 16px;
     }
 }
 
 /* Tablet */
 
-@media screen and (min-width: 530px) and (max-width: 768px) {
+@media screen and (min-width: 530px) and (max-width: 770px) {
     .navContainer {
-        height: 50px;
-        justify-content: center;
+        height: 5vw;
+        justify-content: space-sevenly;
+        gap: 3vw;
     }
 
     nav ul {
         width: 100%;
-        gap: 10px;
+        gap: 7px;
     }
 
     nav ul li {
-        font-size: 15px;
-        width: 100px;
+        font-size: 2vw;
+        width: 15vw;
+    }
+    .contact {
+        width: 6vw;
+        height: 3vw;
+    }
+    .contact-btn {
+        font-size: 2.5vw;
     }
 }
 
@@ -634,7 +770,32 @@ footer {
 
     .holder {
         flex-direction: column;
-        gap: 10px;
+        gap: 10vw;
+    }
+
+    .my-info {
+        width: 100%;
+        text-align: center;
+    }
+    h3 span {
+        font-size: 3.3vw;
+    }
+    .my-info h3 {
+        width: 100%;
+        font-size: 2.2vw;
+    }
+    .my-info p {
+        font-size: 2.3vw;
+    }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 430px) and (max-width: 770px) {
+
+    .holder {
+        flex-direction: column;
+        gap: 50px;
     }
 
     .my-info {
@@ -642,18 +803,26 @@ footer {
         text-align: center;
     }
 
+    .typingHolder {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .my-info h3 {
+        width: 66%;
+    }
+
     .my-info span {
         font-size: 1.5rem;
     }
 
     .my-info p {
-        font-size: 14px;
+        font-size: 18px;
     }
+} 
 
-    .about img {
-        height: 45%;
-    }
-}
 
 /* Tablet */
 
@@ -723,9 +892,10 @@ footer {
     }
 
     .exp-image img {
+        padding: 15vw;
         width: 100%;
         height: 100%;
-        border-radius: 8px; 
+        border-radius: 0 0 8px 8px; 
         object-fit: cover;
     }
 }
@@ -766,12 +936,11 @@ footer {
 
     .exp-image {
         width: 100%;
-        height: 65%;
+        height: 80%;
     }
 
     .exp-image img {
-        width: 70%;
-        height: 100%;
+        width: 80%;
         border-radius: 8px; 
         object-fit: cover;
     }
@@ -780,60 +949,89 @@ footer {
 
 /* Tablet */
 
-@media screen and (min-width: 435px) and (max-width: 768px) {
+@media screen and (min-width: 430px) and (max-width: 768px) {
     .experience {
-        flex-wrap: nowrap;
+        flex-direction: column;
         gap: 20px;
+        justify-content:flex-start;
+        align-items: center;
         width: 100%;
         height: 100%;
-        padding: 20px;
     }
     
     .experience-item {
-        margin-top: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        text-align: center;
         width: 100%;
-        height: 85%;
+        height: 25%; 
     }
 
     .exp-title {
-     height: 90px;
-    }
-
-    .exp-title h2 {
-        font-size: 1.2em;
-        text-align: center;
-        justify-content: center;
-        width: 100%;
+        display: none;
     }
 
     .exp-duration h3 {
-        font-size: 0.8em;
+        font-size: 1.2em;
     }
 
     .exp-description p {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     .exp-image {
-        width: 90%;
-        height: 25%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        height: 80%;
     }
 
     .exp-image img {
-        width: 60%;
-        height: 90%;
+        width: 80%;
         border-radius: 8px; 
         object-fit: cover;
     }
+
+/* Screen & projectors */
+
+@media screen and (min-width: 4000px) {
+    .titles {
+        font-size: 2.5vw;
+    }
+
+    .experience {
+        gap: 5vw;
+    }
+
+    .experience-item {
+        width: 25vw;
+        padding: 1.5vw;
+        height: 100%;
+    }
+
+    .exp-title h2 {
+        font-size: 2.2vw;
+    }
+
+    .exp-duration h3 {
+        font-size: 2vw;
+    }
+
+    .exp-description p {
+        font-size: 1.5vw;
+    }
+    .exp-image {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    .exp-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
 }
+
 
 /* Responsive Skill */
 
@@ -995,4 +1193,4 @@ footer {
         font-size: 0.8rem;
     }
     
-}
+} }

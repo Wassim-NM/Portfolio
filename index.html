@@ -4,30 +4,38 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
         <title>Wassim's Portfolio</title>
     </head>
 
     <body>
         <header>
             <div class="navContainer">
+                <div class="logo">
+                    <img src="Assets/logo.jpg" alt="Wassim Mahmoud's Logo">
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#about">About Me</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact-me">Contact Me</a></li>
                     </ul>
                 </nav>
+                <div class="contact">
+                    <a href="#contact-me" class="contact-btn normal">Contact Me</a>
+                    <a href="#contact-me" class="contact-btn mobile"><i class='bx bx-phone'></i></a>
+                </div>
             </div>
         </header>
         <main>
             <section id="about" class="about">
                 <div class="holder">
                     <div class="my-info">
-                        <h3><span>Web Developer</span> & <span>Software Engineering</span></h3>
+                        <div class="typingHolder">
+                            <h3><span>Web Developer</span> & <span>Software Engineering</span></h3>
+                        </div>
                         <!-- <p> Wassim Mahmoud,</p> -->
                         <p> A dedicated Computer Manager with expertise in web development. Successfully enhanced a
                             university website, improving usability and accessibility for a diverse audience. Passionate
@@ -37,7 +45,7 @@
                 </div>
             </section>
             <section id="experience">
-                <div id="experiance-section">
+                <div id="experience-section">
                     <h3 class="titles">Experiance</h3>
                     <div class="experience">
                         <div class="experience-item">
@@ -132,6 +140,14 @@
                                     </div>
                                 </div>
                                 <span class="title">Java</span>
+                            </div>
+                            <div class="parent-skill">
+                                <div class="skill">
+                                    <div class="progress" data-progress="55">
+                                        <span class="progress-number">0%</span>
+                                    </div>
+                                </div>
+                                <span class="title">JavaScript</span>
                             </div>
                             <div class="parent-skill">
                                 <div class="skill">
